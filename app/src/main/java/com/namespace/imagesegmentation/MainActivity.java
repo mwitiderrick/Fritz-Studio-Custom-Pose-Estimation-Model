@@ -27,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Fritz.configure(this, "YOUR_TOKEN");
+        Fritz.configure(this, "YOUR_API_KEY");
 
         buttonClick = findViewById(R.id.buttonClick);
         imageView = findViewById(R.id.imageView);
 
     }
-    public void segmentImages(View view){
+    public void detectKeyPoints(View view){
         PoseOnDeviceModel onDeviceModel = new PoseOnDeviceModel(
                 "file:///android_asset/PoseFast1605860488.tflite",
                 "12ed09a947714761a7afdb87f2f9838a",
